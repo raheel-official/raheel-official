@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+table,th,td,header,footer{
+  transition: all 0.5s ease;
+}
+::selection {
+  background: rgba(245, 81, 5, 0.973);
+}
+body {
+  background: rgb(211, 207, 207);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background: rgb(240, 232, 232);
+  min-width: 60vw;
+  max-width: max-content;
+  height: max-content;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(255, 217, 121, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+.table-wrapper {
+  overflow-x: auto;
+}
+
+table,
+th,
+td {
+  border: 2px solid rgba(0, 0, 0, 0.459);
+  border-collapse: collapse;
+}
+table {
+  width: 100%;
+}
+th {
+  font-size: 20px;
+  padding: 5px;
+}
+td {
+  text-align: center;
+  padding: 5px;
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.break {
+  background: #94cae9;
+  font-weight: 600;
+}
+
+.free-period {
+  background: #ff8383;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 154, 60, 0.882);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+header p{
+  font-weight: 600;
+}
+footer {
+  background: rgba(255, 154, 60, 0.882);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer > p {
+  opacity: 0.5;
+}
+
+.btns {
+  display: flex;
+  gap: 1rem;
+}
+.btns  .button {
+  background-color: rgb(241, 128, 75);
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  padding: 5px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btns  .button:hover {
+  background-color: rgba(240, 103, 39, 0.686);
+  transform: scale(1.1);
+}
+
+#slider {
+  width: max-content;
+  z-index: -1;
+}
+.btns #theme-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+}
+.btns > #theme-btn:hover {
+  overflow: visible;
+}
+.btns #theme-btn #slider {
+  position: absolute;
+  right: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+  border-top-right-radius: 10px;
+  bottom: 0px;
+  background: rgba(255, 123, 0, 0.494);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+.btns #theme-btn:hover #slider {
+  left: 100%;
+}
+.test {
+  background: #ffd966;  /* yellow highlight */
+  font-weight: bold;
+}
+
+.exam {
+  background: #ff4d4d;  /* red highlight */
+  color: white;
+  font-weight: bold;
+}
+
+/* THEMES */
+.theme-red th {
+  background: rgb(250, 118, 118);
+}
+.theme-red tbody tr:nth-child(even) {
+  background-color: #fa767656;
+}
+.theme-red .btns > .button,
+.theme-red .btns #theme-btn #slider {
+  background: rgb(253, 79, 79);
+}
+.theme-red header,
+.theme-red footer {
+  background: #fd5959;
+}
+
+.theme-orange th {
+  background: rgb(252, 162, 78);
+}
+.theme-orange tbody tr:nth-child(even) {
+  background: rgba(255, 123, 0, 0.239);
+}
+.theme-orange .break {
+  background: rgb(148, 202, 233);
+}
+
+.theme-blue header,
+.theme-blue footer {
+  background: #5e91ff;
+}
+.theme-blue th {
+  background: #7da6ff;
+}
+.theme-blue tbody tr:nth-child(even) {
+  background: #6f9cfd56;
+}
+.theme-blue .btns > .button,
+.theme-blue .btns #theme-btn #slider {
+  background: #4a82fc;
+}
+
+.theme-yellow th {
+  background: #f7f57f;
+}
+.theme-yellow tbody tr:nth-child(even) {
+  background: #dfdd7448;
+}
+.theme-yellow .btns > .button,
+.theme-yellow .btns #theme-btn #slider {
+  background: #ecea57;
+}
+.theme-yellow header,
+.theme-yellow footer {
+  background: #f8f670;
+}
+input[type='color']{
+  border: none;
+  outline: none;
+  height: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  header {
+    padding: 5px;
+  }
+  footer {
+    padding: 10px;
+    font-size: 15px;
+  }
+  .btns .button{
+    padding: 5px;
+    font-size: 10px;
+    margin-bottom: 10px;
+  }
+  td {
+    padding: 5px;
+    font-size: 12px;
+  }
+  th {
+    font-size: 13px;
+  }
+  header  h1 {
+    font-size: 15px;
+  }
+
+}

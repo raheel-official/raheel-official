@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>School Timetable</title>
+  </head>
+  <body class="body">
+    <header id="header">
+      <h1 id="header-h1">Time Table</h1>
+      <p>10<sup>th</sup> B, FG R.A Bazar R.W.P</p>
+    </header>
+
+    <div class="container">
+      <!-- contains buttons -->
+      <div class="btns">
+        <!-- edit btn -->
+        <button id="edit-btn" class="button">Edit</button>
+        <div id="theme-btn" class="button">
+          Themes
+          <div id="slider">
+            <label for="theme-default">Default</label>
+            <input
+              type="radio"
+              name="theme"
+              id="theme-default"
+              value="theme-orange"
+              checked
+            />
+
+            <label for="theme-blue">Blue</label>
+            <input
+              type="radio"
+              name="theme"
+              id="theme-blue"
+              value="theme-blue"
+            />
+
+            <label for="theme-red">Red</label>
+            <input type="radio" name="theme" id="theme-red" value="theme-red" />
+
+            <label for="theme-yellow">Yellow</label>
+            <input
+              type="radio"
+              name="theme"
+              id="theme-yellow"
+              value="theme-yellow"
+            />
+            <label for="custom-theme-color">Custom</label>
+            <input type="color" name="color" id="custom-theme-color" />
+          </div>
+        </div>
+      </div>
+
+      <!-- timetable -->
+      <div class="table-wrapper">
+        <table id="table">
+          <thead>
+            <tr>
+              <th>Days</th>
+              <th>Class 5</th>
+              <th>Class 6</th>
+              <th>Class 7</th>
+              <th>Class 8</th>
+              <th rowspan="8"></th>
+              <th>Class 9</th>
+              <th>Class 10</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Monday</td>
+              <td>Chemistry</td>
+              <td>Biology</td>
+              <td>English</td>
+              <td>Math</td>
+              <td class="break"></td>
+              <td>Islamiat</td>
+              <td class="free-period">Free Period</td>
+            </tr>
+            <tr>
+              <td>Tuesday</td>
+              <td>English</td>
+              <td>Islamiat</td>
+              <td>Science</td>
+              <td class="test">Test</td>
+              <td class="break">B</td>
+              <td>Computer Science</td>
+              <td>Pak Studies</td>
+            </tr>
+            <tr>
+              <td>Wednesday</td>
+              <td>Science</td>
+              <td class="free-period">Free Period</td>
+              <td>Math</td>
+              <td>English</td>
+              <td class="break">R</td>
+              <td class="test">Test</td>
+              <td>Islamiat</td>
+            </tr>
+            <tr>
+              <td>Thursday</td>
+              <td>Chemistry</td>
+              <td>Math</td>
+              <td class="test">Test</td>
+              <td>Computer Science</td>
+              <td class="break">E</td>
+              <td>English</td>
+              <td>Pak Studies</td>
+            </tr>
+            <tr>
+              <td>Friday</td>
+              <td>Computer Science</td>
+              <td>English</td>
+              <td class="free-period">Free Period</td>
+              <td>Mathematics</td>
+              <td class="break">A</td>
+              <td>Pak Studies</td>
+              <td class="exam">Exam</td>
+            </tr>
+            <tr>
+              <td>Saturday</td>
+              <td>Test</td>
+              <td>History</td>
+              <td class="free-period">Free Period</td>
+              <td>Pak Study</td>
+              <td class="break">K</td>
+              <td>Math</td>
+              <td>Islamiat</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer>
+      <p>Made by Ahmad || FG Public School R.A Bazar R.W.P</p>
+    </footer>
+
+    <script src="myScript.js"></script>
+  </body>
+</html>
